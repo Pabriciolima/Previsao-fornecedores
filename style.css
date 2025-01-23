@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #b9b5b5;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -35,8 +35,8 @@ h1 {
 }
 
 .fornecedor-item {
-    background-color: #007bff;
-    color: white;
+    background-color: #000000;
+    color: rgb(247, 210, 6);
     padding: 15px 30px;
     margin: 10px;
     border-radius: 8px;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .fornecedor-item:hover {
-    background-color: #0056b3;
+    background-color: #383b3f;
 }
 
 .detalhes {
@@ -73,7 +73,7 @@ h1 {
 }
 
 .detalhes button {
-    background-color: #007bff;
+    background-color: #ee0808;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -82,10 +82,76 @@ h1 {
 }
 
 .detalhes button:hover {
-    background-color: #0056b3;
+    background-color: #aa0303;
 }
 
 /* Exibe o painel de detalhes */
 .hidden {
     display: none;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .fornecedores-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fornecedor-item {
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .detalhes {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .detalhes h2 {
+        font-size: 1.5rem;
+    }
+
+    .detalhes p {
+        font-size: 1rem;
+    }
+
+    .detalhes button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .fornecedor-item {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .detalhes h2 {
+        font-size: 1.2rem;
+    }
+
+    .detalhes p {
+        font-size: 0.9rem;
+    }
+
+    .detalhes button {
+        padding: 7px 14px;
+    }
 }
