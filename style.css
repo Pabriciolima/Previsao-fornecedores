@@ -1,18 +1,29 @@
+/* Reseta margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/* Garante que o HTML e o body ocupem toda a altura da tela */
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
 }
 
+/* Flexbox para garantir que o footer fique na parte inferior */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do container principal */
 .container {
     background-color: #b9b5b5;
     padding: 20px;
@@ -20,13 +31,15 @@ body {
     border-radius: 8px;
     width: 80%;
     max-width: 900px;
+    text-align: center;
 }
 
+/* Estilo do título */
 h1 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
+/* Lista de fornecedores */
 .fornecedores-list {
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +47,7 @@ h1 {
     margin-top: 20px;
 }
 
+/* Itens da lista */
 .fornecedor-item {
     background-color: #000000;
     color: rgb(247, 210, 6);
@@ -48,6 +62,7 @@ h1 {
     background-color: #383b3f;
 }
 
+/* Detalhes do fornecedor */
 .detalhes {
     background-color: #f4f4f4;
     padding: 20px;
@@ -85,78 +100,8 @@ h1 {
     background-color: #aa0303;
 }
 
-/* Exibe o painel de detalhes */
-.hidden {
-    display: none;
-}
-
-/* Estilos responsivos para dispositivos móveis */
-@media screen and (max-width: 768px) {
-    body {
-        height: auto;
-        padding: 10px;
-    }
-
-    .container {
-        width: 100%;
-        max-width: none;
-        padding: 15px;
-    }
-
-    .fornecedores-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fornecedor-item {
-        width: 100%;
-        margin: 5px 0;
-        padding: 12px;
-        text-align: center;
-    }
-
-    .detalhes {
-        padding: 15px;
-        margin-top: 15px;
-    }
-
-    .detalhes h2 {
-        font-size: 1.5rem;
-    }
-
-    .detalhes p {
-        font-size: 1rem;
-    }
-
-    .detalhes button {
-        padding: 8px 16px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .fornecedor-item {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    .detalhes h2 {
-        font-size: 1.2rem;
-    }
-
-    .detalhes p {
-        font-size: 0.9rem;
-    }
-
-    .detalhes button {
-        padding: 7px 14px;
-    }
-}
+/* Footer */
 .footer {
-    margin-top: 20px;
     text-align: center;
     padding: 10px 0;
     background-color: #f8f9fa;
