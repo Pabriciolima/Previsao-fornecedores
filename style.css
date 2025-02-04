@@ -8,7 +8,7 @@
 /* Garante que o HTML e o body ocupem toda a altura da tela */
 html, body {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fonte personalizada do Google Fonts */
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -25,17 +25,19 @@ html, body {
 
 /* Estilo do container principal */
 .container {
-    background-color: #b9b5b5;
+    background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 80%;
     max-width: 900px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Estilo do título */
 h1 {
+    color: #333333;
     margin-bottom: 20px;
 }
 
@@ -49,22 +51,23 @@ h1 {
 
 /* Itens da lista */
 .fornecedor-item {
-    background-color: #000000;
-    color: rgb(247, 210, 6);
+    background-color: #007BFF;
+    color: #ffffff;
     padding: 15px 30px;
     margin: 10px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .fornecedor-item:hover {
-    background-color: #383b3f;
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Detalhes do fornecedor */
 .detalhes {
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     padding: 20px;
     margin-top: 20px;
     border: 1px solid #ddd;
@@ -80,24 +83,27 @@ h1 {
 }
 
 .detalhes h2 {
+    color: #333333;
     margin-bottom: 10px;
 }
 
 .detalhes p {
     margin-bottom: 20px;
+    color: #555555;
 }
 
 .detalhes button {
-    background-color: #ee0808;
+    background-color: #dc3545;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .detalhes button:hover {
-    background-color: #aa0303;
+    background-color: #c82333;
 }
 
 /* Footer */
@@ -108,4 +114,125 @@ h1 {
     font-size: 14px;
     color: #6c757d;
     border-top: 1px solid #dee2e6;
+}
+
+/* Classe hidden para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .fornecedor-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .fornecedor-item {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+/* Estilo base */
+body {
+    --bg-color: #f4f4f4;
+    --text-color: #333333;
+    --container-bg: #ffffff;
+    --item-bg: #007BFF;
+    --item-hover-bg: #0056b3;
+    --detalhes-bg: #f8f9fa;
+    --detalhes-border: #ddd;
+    --button-bg: #dc3545;
+    --button-hover-bg: #c82333;
+    --footer-bg: #f8f9fa;
+    --footer-text: #6c757d;
+}
+
+/* Modo noturno */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --container-bg: #1e1e1e;
+    --item-bg: #444444;
+    --item-hover-bg: #555555;
+    --detalhes-bg: #333333;
+    --detalhes-border: #444444;
+    --button-bg: #bb2d3b;
+    --button-hover-bg: #aa242f;
+    --footer-bg: #1e1e1e;
+    --footer-text: #bbbbbb;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: var(--container-bg);
+}
+
+.fornecedor-item {
+    background-color: var(--item-bg);
+}
+
+.fornecedor-item:hover {
+    background-color: var(--item-hover-bg);
+}
+
+.detalhes {
+    background-color: var(--detalhes-bg);
+    border: 1px solid var(--detalhes-border);
+}
+
+.detalhes button {
+    background-color: var(--button-bg);
+}
+
+.detalhes button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .fornecedor-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .fornecedor-item {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
